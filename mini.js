@@ -52,24 +52,5 @@ async function searchAnime() {
 // Ensure jQuery is loaded before this script in your HTML:
 // <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-$(document).ready(function() {
-    const $input = $("#animeinput");
-    const $button = $("#searchbtn"); 
-    if ($input.length && $button.length) {
-        $input.on("keydown", function(event) {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                $button.click();
-                 $(this).siblings("#text-show").slideDown();
-            }
-        });
-    } else {
-        console.error("animeinput or searchbtn element not found in the DOM.");
-    }
-      $(document).on('click','button',function(){
-           $(this).siblings("#text-show").slideDown();
-      });
-    $(document).on('click','.btn',function(){
-        $('html,body').animate({scrollTop:0},'slow');
-    });
-});
+
+
